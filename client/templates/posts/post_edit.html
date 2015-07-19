@@ -10,9 +10,12 @@
       <label for="title" class="control-label">
         Title
       </label>
-      <input type="text" name="title" id="title" value="{{title}}" placeholder="Name your post" class="form-control" />
-      <hr />
-      <a href="#" class="btn btn-danger delete">Delete post</a>
+      <div class="controls">
+        <input type="text" name="title" id="title" value="{{title}}" placeholder="Name your post" class="form-control" />
+      </div>
     </div>
+    <input type="submit" value="Submit" class="btn btn-primary submit" />
+    <hr />
+    <a href="#" class="btn btn-danger delete">Delete post</a>
   </form>
 </template>
