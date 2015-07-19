@@ -16,7 +16,8 @@ Package.onUse(function(api) {
 });
 
 Package.onTest(function(api) {
-  api.use('tinytest');
-  api.use('bennyz:errors');
-  api.addFiles('errors-tests.js');
+  api.use(['tinytest', 'test-helpers'], 'client');
+  api.use('bennyz:errors', 'client');
+  api.use('matb33:collection-hooks', 'client');
+  api.addFiles('errors-tests.js', 'client');
 });

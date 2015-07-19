@@ -1,8 +1,8 @@
 Errors = {
   collection: new Mongo.Collection(null),
 
-  throw: function(message) {
-    Errors.collection.insert({ message: message, seen: false});
+  throw: function(errorMessage) {
+    Errors.collection.insert({ message: errorMessage, seen: false});
   }
 };
 
