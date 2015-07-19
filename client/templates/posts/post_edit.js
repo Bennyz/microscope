@@ -11,12 +11,12 @@ Template.postEdit.events({
 
     Posts.update(currentPostId, {$set: postProperties}, function(err) {
       if (err) {
-        return alert(error.reason);
+        return alert(err.reason);
       } else {
         Router.go('postPage', { _id: currentPostId });
       }
     });
-  }
+  },
 
   'click .delete': function(e) {
     e.preventDefault();
