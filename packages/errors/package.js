@@ -6,10 +6,11 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.2');
+  api.use('matb33:collection-hooks', ['client', 'server']);
   api.use(['minimongo', 'mongo-livedata', 'templating'], 'client');
-  api.addFiles(['errors.js, errors_list.html', 'errors_list.js'], 'client');
+  api.addFiles(['errors.js', 'errors_list.html', 'errors_list.js'], 'client');
 
-  if (api.export) [
+  if (api.export) {
     api.export('Errors');
   }
 });
