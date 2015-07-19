@@ -12,9 +12,9 @@ Template.postEdit.events({
 
     Meteor.call('postUpdate', postProperties, function(err, result) {
       if (err) {
-        return alert(err.reason);
+        return throwError(err.reason);
       } else if (result.postExists) {
-        return alert('URL already exists');
+        return throwError('URL already exists');
       } else {
         Router.go('postPage', { _id: currentPostId });
       }
