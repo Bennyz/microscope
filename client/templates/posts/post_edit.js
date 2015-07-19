@@ -6,12 +6,15 @@ Template.postEdit.events({
 
     var postProperties = {
       url: $(e.target).find('[name=url]').val(),
-      title: $(e.target).find('[name=title]').val()
+      title: $(e.target).find('[name=title]').val(),
+      _id: currentPostId
     }
 
-    Posts.update(currentPostId, {$set: postProperties}, function(err) {
+    Meteor.call('postUpdate', postProperties, function(err, result) {
       if (err) {
         return alert(err.reason);
+      } else if (result.postExists) {
+        return alert('URL already exists');
       } else {
         Router.go('postPage', { _id: currentPostId });
       }
