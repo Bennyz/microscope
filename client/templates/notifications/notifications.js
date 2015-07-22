@@ -4,7 +4,7 @@ Template.notifications.helpers({
   },
 
   notificationCount: function() {
-    return Notification.find({ userId: Meteor.userId(), read: false}).count();
+    return Notifications.find({ userId: Meteor.userId(), read: false}).count();
   }
 });
 
