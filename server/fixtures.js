@@ -42,7 +42,7 @@ if (Posts.find().count() === 0) {
     author: tom.profile.name,
     url: 'http://meteor.com',
     submitted: new Date(now - 10 * 3600 * 1000),
-    commentsCount: 0
+    commentsCount: 0,
     upvoters: [],
     votes: 0
   });
@@ -53,7 +53,7 @@ if (Posts.find().count() === 0) {
     author: tom.profile.name,
     url: 'http://themeteorbook.com',
     submitted: new Date(now - 12 * 3600 * 1000),
-    commentsCount: 0
+    commentsCount: 0,
     upvoters: [],
     votes: 0
   });
@@ -66,7 +66,7 @@ if (Posts.find().count() === 0) {
       userId: sacha._id,
       url: 'http://google.com/?q=test-' + i,
       submitted: new Date(now - i * 3600 * 1000),
-      commentsCount: 0
+      commentsCount: 0,
       upvoters: [],
       votes: 0
     });
