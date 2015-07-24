@@ -7,7 +7,7 @@
         <span>{{domain}}</span>
       </h3>
       <p>
-        {{ votes }} votes,
+        {{ pluralize votes "Vote" }},
         Submitted by {{author}}
         <a href="{{pathFor 'postPage'}}">{{ commentsCount }} comments</a>
         {{#if ownPost}}
